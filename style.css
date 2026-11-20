@@ -1,0 +1,203 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f7f2ea;      
+  color: #3d3229;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.4em;
+  line-height: 1.2;
+}
+
+.app-header {
+  background: #b5654a;      
+  color: #fdf8f1;
+  padding: 18px 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  max-width: 900px;
+  margin-inline: auto;
+  font-size: 1.5rem;
+}
+
+
+.app-main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  background: #fffdf9;
+  padding: 14px;
+  border-radius: 6px;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 220px;
+}
+
+.search-box label {
+  font-size: 0.85rem;
+  color: #7a6a5d;
+}
+
+.search-box input {
+  padding: 8px 10px;
+  border: 1px solid #d9cbb8;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fffdf9;
+  color: inherit;
+}
+
+.search-box input:focus {
+  outline: 2px solid #e0b9a4;
+  border-color: #b5654a;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 9px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #b5654a;
+  color: #fdf8f1;
+}
+
+button:hover:not(:disabled) {
+  background: #9c5238;
+}
+
+button:disabled {
+  background: #cfc2b4;
+  color: #f1e9dc;
+  cursor: not-allowed;
+}
+
+.btn-posts {
+  background: #5f7a61;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-posts:hover:not(:disabled) {
+  background: #4d6550;
+}
+
+.status-message {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.status-message:empty {
+  padding: 0;
+}
+
+.status-message.loading {
+  background: #e8efe6;
+  color: #3f5741;
+}
+
+.status-message.error {
+  background: #f5dcd5;
+  color: #8a3a26;
+}
+
+.status-message.info {
+  background: #f2e8d4;
+  color: #7a5f2e;
+}
+
+/* ---------- Список пользователей ---------- */
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.user-card {
+  background: #fffdf9;
+  border: 1px solid #e6dac8;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user-card h3 {
+  font-size: 1rem;
+  color: #3d3229;
+}
+
+.user-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #6d5e51;
+  word-break: break-word;
+}
+
+.user-card .btn-posts {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+/* ---------- Область публикаций ---------- */
+.posts-area {
+  background: #fffdf9;
+  border: 1px solid #e6dac8;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.posts-placeholder {
+  margin: 0;
+  color: #9a8b7d;
+  font-style: italic;
+}
+
+.post-card {
+  border-left: 3px solid #5f7a61;
+  padding: 6px 10px;
+  background: #f8f3ea;
+  border-radius: 3px;
+}
+
+.post-card h4 {
+  font-size: 0.92rem;
+  color: #3d3229;
+}
+
+.post-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #5b4d42;
+}
